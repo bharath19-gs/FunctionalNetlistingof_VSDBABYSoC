@@ -10,7 +10,17 @@ A functional simulation simulates the design description to verify its logical c
 
 ## Simulation of VSDBABY SoC
 
-![image](https://user-images.githubusercontent.com/55539862/183136639-11da7fc6-97f4-4d80-b1d3-1ed202a68ae8.png)
+using iverilog, run the below commands to get the values and observe it using [GTKWave](http://gtkwave.sourceforge.net/).
+
+```
+iverilog testbench.v vsdbabysoc.v clk_gate.v
+./a.out
+
+gtkwave dump.vcd
+```
+
+
+![image](https://github.com/bharath19-gs/FunctionalNetlistingof_VSDBABYSoC/blob/main/GTK_wave_op.png)
 
   * **CLK:** This is the `input CLK` signal of the `RVMYTH` core. This signal comes from the PLL, originally.
   * **reset:** This is the `input reset` signal of the `RVMYTH` core. This signal comes from an external source, originally.
